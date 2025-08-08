@@ -1,0 +1,7 @@
+<resources>
+    <style name="Theme.WorkoutTimer" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- You can add custom colors here -->
+         <item name="colorPrimary">@color/white</item>
+         <item name="colorAccent">@color/teal_200</item>
+    </style>
+</resources>
