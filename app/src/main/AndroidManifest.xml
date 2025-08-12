@@ -13,7 +13,7 @@
         android:theme="@style/Theme.WorkoutTimer"
         tools:targetApi="31">
         <activity
-            android:name=".SumActivity"
+            android:name=".SpinsActivity"
             android:exported="true"
             android:theme="@style/Theme.WorkoutTimer">
             <intent-filter>
