@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000">
+
+    <!-- Camera + viewfinder -->
+    <com.journeyapps.barcodescanner.DecoratedBarcodeView
+        android:id="@+id/zxing_barcode_scanner"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!-- Dim overlay -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#33000000" />
+
+    <!-- Framing box container -->
+    <FrameLayout
+        android:id="@+id/frameBox"
+        android:layout_width="292dp"
+        android:layout_height="292dp"
+        android:layout_gravity="center"
+        android:background="@drawable/qr_frame_box">
+
+        <!-- Animated laser line inside the frame -->
+        <View
+            android:id="@+id/laser"
+            android:layout_width="270dp"
+            android:layout_height="0.2dp"
+            android:layout_gravity="top|center_horizontal"
+            android:background="@color/blue" />
+
+    </FrameLayout>
+
+</FrameLayout>

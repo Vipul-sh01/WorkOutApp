@@ -77,9 +77,7 @@ public class LuckyWheelView extends View {
         // Path for the arc text
         Path path = new Path();
         RectF textArcBounds = new RectF(padding + 70, padding + 70, size - padding - 70, size - padding - 70);
-        path.addArc(textArcBounds, startAngle + 5, anglePerSlice - 10); // small padding inside slice
-
-        // Draw text along the arc
+        path.addArc(textArcBounds, startAngle + 5, anglePerSlice - 10);
         canvas.drawTextOnPath(text, path, 0, 0, paint);
     }
 
