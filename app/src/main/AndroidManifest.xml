@@ -48,7 +48,7 @@
 
 
         <activity
-            android:name=".SearchActivity"
+            android:name=".DialogActivity"
             android:exported="true"
             android:theme="@style/Theme.WorkoutTimer">
             <intent-filter>
