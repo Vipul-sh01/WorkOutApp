@@ -1,6 +1,7 @@
 [versions]
 agp = "8.5.1"
-kotlin = "1.9.0"
+kotlin = "2.1.10"
+composeCompiler = "2.1.10"
 coreKtx = "1.13.1"
 junit = "4.13.2"
 junitVersion = "1.2.1"
@@ -18,6 +19,7 @@ swiperefreshlayout = "1.1.0"
 firebaseCrashlyticsBuildtools = "3.0.6"
 firebaseAppdistributionGradle = "5.1.1"
 roomCommonJvm = "2.7.2"
+room = "2.7.2"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -46,9 +48,16 @@ firebase-appdistribution-gradle = { group = "com.google.firebase", name = "fireb
 androidx-room-common-jvm = { group = "androidx.room", name = "room-common-jvm", version.ref = "roomCommonJvm" }
 zxing-android = { module = "com.journeyapps:zxing-android-embedded", version = "4.3.0" }
 zxing-core = { module = "com.google.zxing:core", version = "3.5.3" }
+room-runtime = { module = "androidx.room:room-runtime", version.ref = "room" }
+room-ktx = { module = "androidx.room:room-ktx", version.ref = "room" }
+room-compiler = { module = "androidx.room:room-compiler", version.ref = "room" }
+room-paging = { module = "androidx.room:room-paging", version.ref = "room" }
+room-testing = { module = "androidx.room:room-testing", version.ref = "room" }
+
 
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "composeCompiler" }
 
