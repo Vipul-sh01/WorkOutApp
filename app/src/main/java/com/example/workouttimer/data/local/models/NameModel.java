@@ -13,9 +13,13 @@ public class NameModel {
     @ColumnInfo(name = "name")
     private String name;
 
+    @ColumnInfo(name = "email")
+    private String email;
+
     // Constructor
-    public NameModel(String name) {
+    public NameModel(String name, String email) {
         this.name = name;
+        this.email = email;
     }
 
     // Getters & Setters
@@ -24,4 +28,7 @@ public class NameModel {
 
     public String getName() { return name; }
     public void setName(String name) { this.name = name; }
+
+    public String getEmail() { return email; }
+    public void setEmail(String email) { this.email = email; }
 }

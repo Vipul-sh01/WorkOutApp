@@ -1,0 +1,39 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24"
+    android:autoMirrored="true"
+    android:tintMode="src_in">
+
+    <group
+        android:scaleX="1"
+        android:scaleY="1"
+        android:translateX="0"
+        android:translateY="0">
+
+        <!-- Yellow -->
+        <path
+            android:fillColor="#FBBC05"
+            android:fillType="evenOdd"
+            android:pathData="M21.35,11.1h-9.18v2.96h5.27c-0.23,1.27-0.93,2.35-1.98,3.07l2.04,1.63c1.87-1.73 2.95-4.28 2.95-7.24 0-0.62-0.06-1.22-0.1-1.42z"/>
+
+        <!-- Red -->
+        <path
+            android:fillColor="#EA4335"
+            android:fillType="evenOdd"
+            android:pathData="M12.17,22c2.38,0 4.37-0.78 5.83-2.13l-3.2,-2.55c-0.89,0.6 -2.03,0.96 -3.63,0.96 -2.79,0 -5.15,-1.88 -5.99,-4.41l-3.31,2.77C4.33,19.98 7.99,22 12.17,22z"/>
+
+        <!-- Green -->
+        <path
+            android:fillColor="#34A853"
+            android:fillType="evenOdd"
+            android:pathData="M6.18,13.87c-0.2,-0.6 -0.31,-1.24 -0.31,-1.9 0,-0.66 0.11,-1.3 0.31,-1.9L2.87,6.9C2.17,8.29 1.79,9.89 1.79,11.57c0,1.68 0.38,3.28 1.08,4.68l3.31,-2.38z"/>
+
+        <!-- Blue -->
+        <path
+            android:fillColor="#4285F4"
+            android:fillType="evenOdd"
+            android:pathData="M12.17,4.82c1.29,0 2.44,0.44 3.35,1.3l2.51,-2.51C16.54,2.1 14.55,1.3 12.17,1.3 7.99,1.3 4.33,3.32 2.87,6.9l3.31,2.78c0.84,-2.53 3.2,-4.86 5.99,-4.86z"/>
+    </group>
+</vector>

@@ -16,6 +16,9 @@ public interface NameDao {
     @Insert
     void insertName(NameModel nameModel);
 
+    @Query("UPDATE users SET email = :email WHERE id = :id")
+    void updateEmail(int id, String email);
+
     // Get all names
     @Query("SELECT * FROM users") // use the same table name as in NameModel
     LiveData<List<NameModel>> getAllNames();

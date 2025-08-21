@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
 
     private NameViewModel nameViewModel;
     private NameAdapter adapter;
-    private EditText editTextName;
+    private EditText editTextName, editTextEmail;
     private Button buttonAdd;
     private RecyclerView recyclerView;
 
@@ -29,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_product);
 
         editTextName = findViewById(R.id.editTextName);
+        editTextEmail = findViewById(R.id.editTextEmail);
         buttonAdd = findViewById(R.id.buttonAdd);
         recyclerView = findViewById(R.id.recyclerViewNames);
 
@@ -46,12 +47,14 @@ public class MainActivity extends AppCompatActivity {
         // Add name on button click
         buttonAdd.setOnClickListener(v -> {
             String name = editTextName.getText().toString().trim();
-            if (TextUtils.isEmpty(name)) {
-                Toast.makeText(this, "Enter a name and Address", Toast.LENGTH_SHORT).show();
+            String email = editTextEmail.getText().toString().trim();
+            if (TextUtils.isEmpty(name) || TextUtils.isEmpty(email)) {
+                Toast.makeText(this, "Enter a name and email", Toast.LENGTH_SHORT).show();
                 return;
             }
-            nameViewModel.insert(new NameModel(name));
+            nameViewModel.insert(new NameModel(name, email));
             editTextName.setText("");
+            editTextEmail.setText("");
         });
     }
 }

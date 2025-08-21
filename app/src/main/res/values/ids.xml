@@ -2,4 +2,7 @@
 <resources>
     <item name="btnClose" type="id" />
     <item name="tvMessage" type="id" />
+    <item name="startBtn" type="id" />
+    <item name="stopBtn" type="id" />
+    <item name="googleSignInButton" type="id" />
 </resources>

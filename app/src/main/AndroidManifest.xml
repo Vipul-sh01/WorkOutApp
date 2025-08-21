@@ -38,6 +38,9 @@
                 android:resource="@xml/file_paths" />
         </provider>
 
+        <service android:name=".services.MusicService"
+            android:exported="false"/>
+
         <!-- QR Code Scanner (ZXing Capture Activity) -->
 <!--        <activity-->
 <!--            android:name=".CaptureAct"-->
@@ -48,7 +51,7 @@
 
 
         <activity
-            android:name=".MainActivity"
+            android:name=".MusicActivity"
             android:exported="true"
             android:theme="@style/Theme.WorkoutTimer">
             <intent-filter>
@@ -63,6 +66,7 @@
             android:name=".CaptureAct"
             android:screenOrientation="portrait"
             android:exported="false" />
+        <activity android:name=".SingleImageActivity" />
 
     </application>
 </manifest>

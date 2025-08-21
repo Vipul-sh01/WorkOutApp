@@ -70,7 +70,9 @@ dependencies {
     implementation(libs.zxing.core)
     implementation(libs.room.runtime)
     implementation(libs.room.ktx)
-    kapt(libs.room.compiler) // use kapt for Kotlin
+    kapt(libs.room.compiler)
+    implementation(libs.glide)
+    kapt(libs.glide.compiler)
     implementation(libs.androidx.room.common.jvm)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)

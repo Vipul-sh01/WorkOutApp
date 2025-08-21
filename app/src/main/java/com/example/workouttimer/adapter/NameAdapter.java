@@ -30,6 +30,7 @@ public class NameAdapter extends RecyclerView.Adapter<NameAdapter.NameViewHolder
     public void onBindViewHolder(@NonNull NameViewHolder holder, int position) {
         NameModel current = nameList.get(position);
         holder.textViewName.setText(current.getName());
+        holder.textViewEmail.setText(current.getEmail());
     }
 
     @Override
@@ -44,11 +45,12 @@ public class NameAdapter extends RecyclerView.Adapter<NameAdapter.NameViewHolder
 
     static class NameViewHolder extends RecyclerView.ViewHolder {
         private TextView textViewName;
-        private TextView textViewAddress;
+        private TextView textViewEmail;
 
         public NameViewHolder(@NonNull View itemView) {
             super(itemView);
             textViewName = itemView.findViewById(R.id.textViewName);
+            textViewEmail = itemView.findViewById(R.id.textViewEmail);
         }
     }
 }
