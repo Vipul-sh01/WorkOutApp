@@ -33,6 +33,8 @@ public class AnimationActivity extends AppCompatActivity {
                     btnAnimate.setVisibility(v.GONE);
                 }
 
+
+
                 @Override
                 public void onAnimationRepeat(Animation animation) { }
             });

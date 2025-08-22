@@ -51,7 +51,7 @@
 
 
         <activity
-            android:name=".MusicActivity"
+            android:name=".ImageActivity"
             android:exported="true"
             android:theme="@style/Theme.WorkoutTimer">
             <intent-filter>
