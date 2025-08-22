@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.workouttimer.R;
 import com.example.workouttimer.data.local.models.NameModel;
 
+import java.text.BreakIterator;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -31,6 +32,7 @@ public class NameAdapter extends RecyclerView.Adapter<NameAdapter.NameViewHolder
         NameModel current = nameList.get(position);
         holder.textViewName.setText(current.getName());
         holder.textViewEmail.setText(current.getEmail());
+        holder.textViewAge.setText(String.valueOf(current.getAge()));
     }
 
     @Override
@@ -46,11 +48,13 @@ public class NameAdapter extends RecyclerView.Adapter<NameAdapter.NameViewHolder
     static class NameViewHolder extends RecyclerView.ViewHolder {
         private TextView textViewName;
         private TextView textViewEmail;
+        private TextView textViewAge;
 
         public NameViewHolder(@NonNull View itemView) {
             super(itemView);
             textViewName = itemView.findViewById(R.id.textViewName);
             textViewEmail = itemView.findViewById(R.id.textViewEmail);
+            textViewAge = itemView.findViewById(R.id.textViewAge);
         }
     }
 }

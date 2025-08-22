@@ -16,10 +16,14 @@ public class NameModel {
     @ColumnInfo(name = "email")
     private String email;
 
+    @ColumnInfo(name = "age")
+    private int age;
+
     // Constructor
-    public NameModel(String name, String email) {
+    public NameModel(String name, String email, int age) {
         this.name = name;
         this.email = email;
+        this.age = age;
     }
 
     // Getters & Setters
@@ -31,4 +35,7 @@ public class NameModel {
 
     public String getEmail() { return email; }
     public void setEmail(String email) { this.email = email; }
+
+    public int getAge() { return age; }
+    public void setAge(int age) { this.age = age; }
 }

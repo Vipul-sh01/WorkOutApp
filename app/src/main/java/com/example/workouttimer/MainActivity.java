@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
 
     private NameViewModel nameViewModel;
     private NameAdapter adapter;
-    private EditText editTextName, editTextEmail;
+    private EditText editTextName, editTextEmail, editTextAge;
     private Button buttonAdd;
     private RecyclerView recyclerView;
 
@@ -30,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
 
         editTextName = findViewById(R.id.editTextName);
         editTextEmail = findViewById(R.id.editTextEmail);
+        editTextAge = findViewById(R.id.editTextAge);
         buttonAdd = findViewById(R.id.buttonAdd);
         recyclerView = findViewById(R.id.recyclerViewNames);
 
@@ -48,13 +49,27 @@ public class MainActivity extends AppCompatActivity {
         buttonAdd.setOnClickListener(v -> {
             String name = editTextName.getText().toString().trim();
             String email = editTextEmail.getText().toString().trim();
-            if (TextUtils.isEmpty(name) || TextUtils.isEmpty(email)) {
-                Toast.makeText(this, "Enter a name and email", Toast.LENGTH_SHORT).show();
+            String ageText = editTextAge.getText().toString().trim();
+
+            if (TextUtils.isEmpty(name) || TextUtils.isEmpty(email) || TextUtils.isEmpty(ageText)) {
+                Toast.makeText(this, "Enter a name, email and age", Toast.LENGTH_SHORT).show();
                 return;
             }
-            nameViewModel.insert(new NameModel(name, email));
+
+            int age;
+            try {
+                age = Integer.parseInt(ageText);
+            } catch (NumberFormatException e) {
+                Toast.makeText(this, "Invalid age", Toast.LENGTH_SHORT).show();
+                return;
+            }
+            nameViewModel.insert(new NameModel(name, email, age));
+
+            // Clear input fields
             editTextName.setText("");
             editTextEmail.setText("");
+            editTextAge.setText("");
         });
+
     }
 }

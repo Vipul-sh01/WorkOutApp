@@ -14,7 +14,7 @@ import com.example.workouttimer.data.local.doa.ImageDao;
 import com.example.workouttimer.data.local.models.NameModel;
 import com.example.workouttimer.data.local.models.ImageEntity;
 
-@Database(entities = {NameModel.class, ImageEntity.class}, version = 2, exportSchema = false)
+@Database(entities = {NameModel.class, ImageEntity.class}, version = 3, exportSchema = false)
 public abstract class NameDatabase extends RoomDatabase {
 
     private static volatile NameDatabase INSTANCE;
@@ -22,11 +22,10 @@ public abstract class NameDatabase extends RoomDatabase {
     // DAOs
     public abstract NameDao nameDao();
 
-    // Migration: Add 'email' column to users (NameModel table)
-    private static final Migration MIGRATION_1_2 = new Migration(1, 2) {
+    private static final Migration MIGRATION_2_3 = new Migration(2, 3) {
         @Override
         public void migrate(@NonNull SupportSQLiteDatabase database) {
-            database.execSQL("ALTER TABLE users ADD COLUMN email TEXT");
+            database.execSQL("ALTER TABLE users ADD COLUMN age NUMBER");
         }
     };
 
@@ -37,7 +36,7 @@ public abstract class NameDatabase extends RoomDatabase {
                 if (INSTANCE == null) {
                     INSTANCE = Room.databaseBuilder(context.getApplicationContext(),
                                     NameDatabase.class, "name_database")
-                            .addMigrations(MIGRATION_1_2) // ✅ preserve old data
+                            .addMigrations(MIGRATION_2_3) // ✅ preserve old data
                             .build();
                 }
             }
