@@ -17,7 +17,7 @@ migrate_working_dir/
 .env.*  # e.g., .env.development, .env.production
 google-services.json
 
-app/google-services.json
+.app/google-services.json
 
 android/keystore/
 android/keystore.properties
