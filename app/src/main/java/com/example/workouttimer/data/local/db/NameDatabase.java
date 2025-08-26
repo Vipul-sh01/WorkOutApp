@@ -36,7 +36,7 @@ public abstract class NameDatabase extends RoomDatabase {
                 if (INSTANCE == null) {
                     INSTANCE = Room.databaseBuilder(context.getApplicationContext(),
                                     NameDatabase.class, "name_database")
-                            .addMigrations(MIGRATION_2_3) // ✅ preserve old data
+                            .addMigrations(MIGRATION_2_3)
                             .build();
                 }
             }

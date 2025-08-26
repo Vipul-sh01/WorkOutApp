@@ -2,6 +2,8 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
     alias(libs.plugins.compose.compiler)
+    alias(libs.plugins.google.services)
+    alias(libs.plugins.firebase.crashlytics)
     id("org.jetbrains.kotlin.kapt")
 
 
@@ -70,6 +72,10 @@ dependencies {
     implementation(libs.zxing.core)
     implementation(libs.room.runtime)
     implementation(libs.room.ktx)
+    implementation(platform(libs.firebase.bom))
+    implementation(libs.firebase.messaging)
+    implementation(libs.firebase.auth)
+    implementation (libs.firebase.crashlytics)
     kapt(libs.room.compiler)
     implementation(libs.glide)
     kapt(libs.glide.compiler)

@@ -1,15 +1,75 @@
-*.iml
-.gradle
-/local.properties
-/.idea/caches
-/.idea/libraries
-/.idea/modules.xml
-/.idea/workspace.xml
-/.idea/navEditor.xml
-/.idea/assetWizardSettings.xml
+# Miscellaneous
+*.class
+*.log
+*.pyc
+*.swp
 .DS_Store
-/build
-/captures
-.externalNativeBuild
-.cxx
-local.properties
+.atom/
+.build/
+.buildlog/
+.history
+.svn/
+.swiftpm/
+migrate_working_dir/
+
+# Environment files
+.env
+.env.*  # e.g., .env.development, .env.production
+google-services.json
+
+app/google-services.json
+
+android/keystore/
+android/keystore.properties
+
+
+# Flutter/Dart default ignores
+build/
+.dart_tool/
+.flutter-plugins
+.packages
+
+# Fastlane credentials
+android/fastlane/service_account_key.json
+
+
+# Ignore generated Facebook env strings
+/android/app/build/generated/res/env/
+/android/app/src/main/res/values/strings.xml
+
+
+# IntelliJ related
+*.iml
+*.ipr
+*.iws
+.idea/
+
+# VS Code settings (optional, uncomment if you want to ignore)
+# .vscode/
+
+# Flutter/Dart/Pub related
+**/doc/api/
+**/ios/Flutter/.last_build_id
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.pub-cache/
+.pub/
+/build/
+
+# Symbolication related
+app.*.symbols
+
+# Obfuscation related
+app.*.map.json
+
+# Android Studio will place build artifacts here
+/android/app/debug
+/android/app/profile
+/android/app/release
+
+# ✅ Allow Gradle wrapper files (used by CI/CD tools like Fastlane & GitHub Actions)
+!android/gradlew
+!android/gradlew.bat
+!android/gradle/wrapper/gradle-wrapper.properties
+!android/gradle/wrapper/gradle-wrapper.jar

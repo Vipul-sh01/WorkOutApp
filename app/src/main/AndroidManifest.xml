@@ -13,6 +13,14 @@
         android:name="android.permission.WRITE_EXTERNAL_STORAGE"
         android:maxSdkVersion="28" />
 
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+
+
+
+
     <uses-feature
         android:name="android.hardware.camera"
         android:required="false" />
@@ -38,8 +46,17 @@
                 android:resource="@xml/file_paths" />
         </provider>
 
-        <service android:name=".services.MusicService"
-            android:exported="false"/>
+<!--        <service android:name=".services.MusicService"-->
+<!--            android:exported="false"/>-->
+
+        <service
+            android:name=".services.MyFirebaseMessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
 
         <!-- QR Code Scanner (ZXing Capture Activity) -->
 <!--        <activity-->
@@ -51,7 +68,7 @@
 
 
         <activity
-            android:name=".MainActivity"
+            android:name=".views.LoginActivity"
             android:exported="true"
             android:theme="@style/Theme.WorkoutTimer">
             <intent-filter>
@@ -62,6 +79,7 @@
 
         <activity android:name=".TimerWorkout" />
         <activity android:name=".ResultActivity" />
+        <activity android:name=".views.HomeActivity" />
         <activity
             android:name=".CaptureAct"
             android:screenOrientation="portrait"

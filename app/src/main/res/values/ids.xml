@@ -5,4 +5,8 @@
     <item name="startBtn" type="id" />
     <item name="stopBtn" type="id" />
     <item name="googleSignInButton" type="id" />
+    <item name="etUsername" type="id" />
+    <item name="etEmail" type="id" />
+    <item name="tvUserDetails" type="id" />
+    <item name="btnLogout" type="id" />
 </resources>

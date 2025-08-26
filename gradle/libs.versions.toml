@@ -21,6 +21,10 @@ firebaseAppdistributionGradle = "5.1.1"
 roomCommonJvm = "2.7.2"
 room = "2.7.2"
 glide = "4.16.0"
+firebase-bom = "34.1.0"
+google-services = "4.4.3"
+firebaseAuth = "24.0.1"
+crashlytics-gradle = "3.0.6"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -56,6 +60,10 @@ room-paging = { module = "androidx.room:room-paging", version.ref = "room" }
 room-testing = { module = "androidx.room:room-testing", version.ref = "room" }
 glide = { module = "com.github.bumptech.glide:glide", version.ref = "glide" }
 glide-compiler = { module = "com.github.bumptech.glide:compiler", version.ref = "glide" }
+firebase-bom = { module = "com.google.firebase:firebase-bom", version.ref = "firebase-bom" }
+firebase-messaging = { module = "com.google.firebase:firebase-messaging" }
+firebase-auth = { group = "com.google.firebase", name = "firebase-auth", version.ref = "firebaseAuth" }
+firebase-crashlytics = { module = "com.google.firebase:firebase-crashlytics" }
 
 
 
@@ -63,4 +71,6 @@ glide-compiler = { module = "com.github.bumptech.glide:compiler", version.ref = 
 android-application = { id = "com.android.application", version.ref = "agp" }
 jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "composeCompiler" }
+google-services = { id = "com.google.gms.google-services", version.ref = "google-services" }
+firebase-crashlytics = { id = "com.google.firebase.crashlytics", version.ref = "crashlytics-gradle" }
 
