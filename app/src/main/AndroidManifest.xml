@@ -16,8 +16,8 @@
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-
-
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM"/>
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
 
 
 
@@ -68,7 +68,7 @@
 
 
         <activity
-            android:name=".views.LoginActivity"
+            android:name=".views.SerializableActivity"
             android:exported="true"
             android:theme="@style/Theme.WorkoutTimer">
             <intent-filter>
@@ -80,6 +80,7 @@
         <activity android:name=".TimerWorkout" />
         <activity android:name=".ResultActivity" />
         <activity android:name=".views.HomeActivity" />
+        <activity android:name=".views.SerializableSecondActivity" />
         <activity
             android:name=".CaptureAct"
             android:screenOrientation="portrait"
