@@ -9,4 +9,12 @@
     <item name="etEmail" type="id" />
     <item name="tvUserDetails" type="id" />
     <item name="btnLogout" type="id" />
+    <item name="notification_image" type="id" />
+    <item name="notification_title" type="id" />
+    <item name="notification_message" type="id" />
+    <item name="btn_accept" type="id" />
+    <item name="btn_decline" type="id" />
+    <item name="txtToken" type="id" />
+    <item name="btnSimple" type="id" />
+    <item name="btnCustom" type="id" />
 </resources>
